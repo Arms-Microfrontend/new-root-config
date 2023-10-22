@@ -14,6 +14,11 @@ registerApplication({
   app: () => System.import("@armsDemo/homepage"),
   activeWhen: ["/home"]
 });
+registerApplication(
+ "@armsDemo/sidebar",
+ () => System.import("@armsDemo/sidebar"),
+(locatiom)=>locatiom.pathname.startsWith("/sidebar")
+);
 
 start({
   urlRerouteOnly: true,
